@@ -24,6 +24,7 @@ public class LocalizacaoApplication implements CommandLineRunner {
 		cidadeRepository.findByNomeEndingWith("tal").forEach(System.out::println);
 		cidadeRepository.findByNomeStartingWith("Na").forEach(System.out::println);
 		cidadeRepository.findByNomeContaining("ata").forEach(System.out::println);
+		cidadeRepository.findByNomeLike("%sa%").forEach(System.out::println); // como a query. Usa o sinal de %
 	}
 
 	void listarCidadesPorHabitantes(){
