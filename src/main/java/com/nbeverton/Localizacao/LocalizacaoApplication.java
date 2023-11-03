@@ -16,7 +16,7 @@ public class LocalizacaoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Initialized!");
-		listarCidadesPorNome();
+		listarCidadesPorQuantidadeDeHabitantes();
 	}
 
 	void listarCidadesPorNome(){
@@ -25,6 +25,10 @@ public class LocalizacaoApplication implements CommandLineRunner {
 		cidadeRepository.findByNomeStartingWith("Na").forEach(System.out::println);
 		cidadeRepository.findByNomeContaining("ata").forEach(System.out::println);
 		cidadeRepository.findByNomeLike("%sa%").forEach(System.out::println); // como a query. Usa o sinal de %
+	}
+
+	void listarCidadesPorQuantidadeDeHabitantes(){
+		cidadeRepository.findByHabitantesLessThan(92385L).forEach(System.out::println);
 	}
 
 	void listarCidadesPorHabitantes(){

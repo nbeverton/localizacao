@@ -19,5 +19,13 @@ public interface CidadeRepository extends JpaRepository<Cidade, Long> {
     List<Cidade> findByNomeLike(String nome);
 
 
+    // Query para encontrar dados com valores numéricos:
     List<Cidade> findByHabitantes(Long habitantes);
+    List<Cidade> findByHabitantesLessThan(Long habitantes);
+    List<Cidade> findByHabitantesGreaterThan(Long habitantes);
+
+
+    // Concatenação de querys
+    List<Cidade> findByHabitantesLessThanAndNomeLike(Long habitantes, String nome);
+
 }

@@ -10,4 +10,4 @@ values
     (1, 'Sao Paulo', 12396371),
     (2, 'Rio de Janeiro', 12396372),
     (3, 'Natal', 918390),
-    (4, 'Santa Luzia', 1239);
+    (4, 'Santa Luzia', 1234);
